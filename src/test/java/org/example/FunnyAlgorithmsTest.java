@@ -3,11 +3,25 @@ package org.example;
 import jdk.jshell.spi.ExecutionControl;
 import org.junit.*;
 
+
+import java.time.LocalTime;
+
 import static org.junit.Assert.*;
 
 public class FunnyAlgorithmsTest {
     private static FunnyAlgorithms funnyAlgorithms=null;
-
+    int Time=0;
+    int TimeEnd=0;
+    @Before
+    public void preTest(){
+        Time=LocalTime.now().getNano();
+    }
+    @After
+    public void postTest(){
+        TimeEnd=LocalTime.now().getNano();
+        int time=TimeEnd-Time;
+        System.out.println("Time:"+String.valueOf(time)+"\n");
+    }
 
     @BeforeClass
     public static void  preRunTest(){
