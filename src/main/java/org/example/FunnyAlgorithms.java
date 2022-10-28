@@ -1,7 +1,7 @@
 package org.example;
 
 public class FunnyAlgorithms {
-
+    public FunnyAlgorithms(){}
     /**
      * Binary Search è un algoritmo di ricerca per trovare la posizione di un
      * elemento in un array ordinato.
@@ -66,13 +66,13 @@ public class FunnyAlgorithms {
      * Non sono ammessi numeri reali
      *
      * @param number
-     * @return
+     * @return numb : intero
      * @throws UnsupportedOperationException
      */
     public int stringToIntConverter(String number) throws UnsupportedOperationException {
         //throw new UnsupportedOperationException("To be implemented");
 
-        if (!number.matches("-?\\d+"))
+        if (!number.matches("\\-?\\d+"))
             throw new UnsupportedOperationException("Valore non accettato");
         int numb=Integer.parseInt(number);
         if(numb<-32768 || numb>32767)
